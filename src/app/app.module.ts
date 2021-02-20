@@ -9,6 +9,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { SelectedProductComponent } from './pages/selected-product/selected-product.component';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NewProductFormComponent } from './pages/new-product-form/new-product-form.component';
 
 
 @NgModule({
@@ -18,11 +22,16 @@ import { AngularFireModule } from '@angular/fire';
     HomePageComponent,
     ProductsComponent,
     SelectedProductComponent,
+    NewProductFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
