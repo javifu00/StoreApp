@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -7,6 +8,8 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { SelectedProductComponent } from './pages/selected-product/selected-product.component';
+import { AngularFireModule } from '@angular/fire';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { SelectedProductComponent } from './pages/selected-product/selected-prod
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent]
