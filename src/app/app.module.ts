@@ -13,6 +13,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NewProductFormComponent } from './pages/new-product-form/new-product-form.component';
+import { ProductCardComponent } from './component/product-card/product-card.component';
+import { ProductsListComponent } from './component/products-list/products-list.component';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { NewProductFormComponent } from './pages/new-product-form/new-product-fo
     ProductsComponent,
     SelectedProductComponent,
     NewProductFormComponent,
+    ProductCardComponent,
+    ProductsListComponent,
   ],
   imports: [
     BrowserModule,

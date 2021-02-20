@@ -1,0 +1,8 @@
+<a class="product-card-wrapper" [routerLink]="['/products', '1']">
+    <div class="card-body">
+        <h2>{{product.title}}</h2>
+        <p>{{product.body}}</p>
+        <h3>{{product.price | currency}}</h3>
+        <span>{{product.category}}</span>
+    </div>
+</a>

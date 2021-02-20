@@ -1,0 +1,7 @@
+<div class="wrapper">
+    <div class="products-list-container">
+        <ng-container  *ngFor="let productItem of products">
+            <app-product-card [product]="productItem"></app-product-card>
+        </ng-container>
+    </div>
+</div>
