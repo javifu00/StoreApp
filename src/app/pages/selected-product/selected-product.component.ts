@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SelectedProductComponent implements OnInit {
 
-  productId: string = '';
+  productId: string = "";
   product: Products = null;
   isLoading: boolean = true;
 

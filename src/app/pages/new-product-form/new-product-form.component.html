@@ -2,7 +2,7 @@
 <div class="post-form">
     <div class="wrapper">
       <form
-        [formGroup]="postForm"
+        [formGroup]="productForm"
         class="form-container"
         (ngSubmit)="onSubmit()"
       >
@@ -64,13 +64,13 @@
         <button
           type="button"
           class="btn-delete"
-          *ngIf="postToUpdate"
+          *ngIf="productToUpdate"
           (click)="deletePost()"
         >
           Delete Post
         </button>
         <button type="submit" class="btn-create">
-          {{ postToUpdate ? "Update Post" : "Create Post" }}
+          {{ productToUpdate ? "Update Post" : "Create Post" }}
         </button>
       </form>
     </div>

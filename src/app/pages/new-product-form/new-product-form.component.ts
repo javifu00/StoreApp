@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewProductFormComponent implements OnInit {
 
-  productForm: FormGroup;
+  productForm!: FormGroup;
 
   productToUpdate: Products = null;
   isLoading = true;
