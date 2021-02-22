@@ -1,3 +1,4 @@
+import { Products } from './../../models/products';
 import { ProductService } from './../../services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -9,12 +10,33 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SelectedProductComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute) { }
+  productId: string = '';
+  product: Products = null;
+  isLoading: boolean = true;
+
+  constructor(
+    private productService: ProductService,
+    private router: ActivatedRoute) { 
+      this.getParamId()
+    }
 
   ngOnInit(): void {
-    this.router.paramMap.subscribe((params) =>{
+    this.findPostById();;
+  }
 
+  getParamId(): void {
+    this.router.paramMap.subscribe((params) => {
+      this.productId = params.get('postId');
     });
+  }
+
+  findPostById(): void {
+    if (this.productId) {
+      this.productService.getPostById(this.productId).subscribe((product) => {
+        this.product = product;
+        this.isLoading = false;
+      });
+    }
   }
 
 }

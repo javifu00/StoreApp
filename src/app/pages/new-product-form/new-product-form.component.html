@@ -1,1 +1,77 @@
 <p>new-product-form works!</p>
+<div class="post-form">
+    <div class="wrapper">
+      <form
+        [formGroup]="postForm"
+        class="form-container"
+        (ngSubmit)="onSubmit()"
+      >
+        <!-- POST TITLE -->
+        <div class="input-container">
+          <label for="title">Enter A Post Title:</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Javascript from 0 to Expert"
+            formControlName="title"
+          />
+        </div>
+
+        <!-- POST SUMMARY -->
+        <div class="input-container">
+          <label for="summary">Enter A Summary:</label>
+          <textarea
+            type="text"
+            id="summary"
+            placeholder="Lorem ipsum..."
+            formControlName="summary"
+          ></textarea>
+        </div>
+
+        <!-- POST DESCRIPTION -->
+        <div class="input-container">
+          <label for="description">Enter A Description:</label>
+          <textarea
+            type="text"
+            id="description"
+            placeholder="Lorem ipsum..."
+            formControlName="body"
+          ></textarea>
+        </div>
+
+        <!-- POST PHOTO -->
+        <div class="input-container">
+          <label for="photo">Enter A Photo:</label>
+          <input
+            type="text"
+            id="photo"
+            placeholder="Lorem ipsum..."
+            formControlName="photo"
+          />
+        </div>
+
+        <!-- POST CATEGORY -->
+        <div class="input-container">
+          <label for="category">Enter A Photo:</label>
+          <select id="category" formControlName="category">
+            <option value="">Select a category</option>
+            <option value="javascript">Javascript</option>
+            <option value="ux-ui">UX and UI</option>
+            <option value="react">React</option>
+          </select>
+        </div>
+
+        <button
+          type="button"
+          class="btn-delete"
+          *ngIf="postToUpdate"
+          (click)="deletePost()"
+        >
+          Delete Post
+        </button>
+        <button type="submit" class="btn-create">
+          {{ postToUpdate ? "Update Post" : "Create Post" }}
+        </button>
+      </form>
+    </div>
+  </div>

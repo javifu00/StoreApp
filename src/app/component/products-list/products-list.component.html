@@ -3,5 +3,6 @@
         <ng-container  *ngFor="let productItem of products">
             <app-product-card [product]="productItem"></app-product-card>
         </ng-container>
+        <a [routerLink]="['/products', 'create']">Create new Product</a>
     </div>
 </div>

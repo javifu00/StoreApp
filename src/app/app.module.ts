@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NewProductFormComponent } from './pages/new-product-form/new-product-form.component';
 import { ProductCardComponent } from './component/product-card/product-card.component';
 import { ProductsListComponent } from './component/products-list/products-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +35,9 @@ import { ProductsListComponent } from './component/products-list/products-list.c
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule,
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

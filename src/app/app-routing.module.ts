@@ -1,3 +1,4 @@
+import { SelectedProductComponent } from './pages/selected-product/selected-product.component';
 import { NewProductFormComponent } from './pages/new-product-form/new-product-form.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -7,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: "", component: HomePageComponent },
   { path: "products", component: ProductsComponent },
-  { path: "products/:id", component: ProductsComponent },
+  { path: "products/:id", component: SelectedProductComponent },
   { path: "products/create", pathMatch: "full", component: NewProductFormComponent },
 ];
 
